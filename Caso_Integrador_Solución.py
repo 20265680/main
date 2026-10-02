@@ -41,8 +41,9 @@ while True:
     elif opcion == "3":
         while True:
             estudiante = input("Digite el nombre del estudiante a cancelar (Ej. Juan): ")
-            if estudiante in cancelados:
-                cancelados.remove(estudiante)
+            if estudiante in cola:
+                cola.remove(estudiante)
+                cancelados.append(estudiante)
                 print(f"El estudiante {estudiante} ha sido cancelado.")
                 break
             else:
